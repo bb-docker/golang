@@ -1,12 +1,12 @@
-FROM bananabb/ubuntu:20.10
+FROM bananabb/ubuntu:24.04
 MAINTAINER BananaBb
 
 # Install Go
 RUN sudo apt-get update -y \
  && mkdir -p $HOME/go \
- && curl -O https://dl.google.com/go/go1.16.2.linux-amd64.tar.gz \
- && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.16.2.linux-amd64.tar.gz \
- && rm go1.16.2.linux-amd64.tar.gz
+ && curl -O https://dl.google.com/go/go1.22.2.linux-amd64.tar.gz \
+ && rm -rf /usr/local/go && tar -C /usr/local -xzf go1.22.2.linux-amd64.tar.gz \
+ && rm go1.22.2.linux-amd64.tar.gz
 
 # Set ENV
 ENV GOROOT /usr/local/go
